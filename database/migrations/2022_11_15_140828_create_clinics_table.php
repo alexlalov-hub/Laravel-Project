@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string("name");
             $table->string("address")->unique();
             $table->string("email")->unique();
-            $table->string("phone");
+            $table->string("phone")->unique();
+            $table->foreignId("");
             $table->timestamps();
         });
     }

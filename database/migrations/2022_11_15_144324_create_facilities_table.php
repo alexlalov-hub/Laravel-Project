@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('facilities', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("clinic_id")->constrained("clinics")->cascadeOnDelete();
             $table->integer("weekday");
             $table->time("from");
             $table->time("to");

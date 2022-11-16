@@ -10,6 +10,10 @@ class Facility extends Model
     use HasFactory;
 
     public function clinics(){
-        return $this->belongsToMany(Clinic::class);
+        return $this->belongsTo(Clinic::class);
+    }
+
+    public function doctor(){
+        return $this->hasOne(Doctor::class);
     }
 }

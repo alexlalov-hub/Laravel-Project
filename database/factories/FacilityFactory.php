@@ -17,8 +17,10 @@ class FacilityFactory extends Factory
     public function definition()
     {
         return [
-            "name" => $this->faker->name,
-            ""
+            'name' => $this->faker->name(),
+            'weekday' => $this->faker->numberBetween(0,6),
+            'from' => $this->faker->numberBetween(0,23),
+            'to' => $this->faker->numberBetween(0,23)
         ];
     }
 }

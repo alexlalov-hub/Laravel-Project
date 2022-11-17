@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("user_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("facility_id")->constrained()->cascadeOnDelete();
+            $table->foreignId("clinic_id")->constrained()->cascadeOnDelete();
+            $table->time("start_time");
+            $table->time("end_time");
+            $table->enum("event", ['pending', 'ongoing', 'ended']);
             $table->timestamps();
         });
     }

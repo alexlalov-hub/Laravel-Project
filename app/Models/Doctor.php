@@ -24,4 +24,8 @@ class Doctor extends Model
     public function events(){
         return $this->hasMany(Event::class);
     }
+
+    public function specilizations(){
+        return $this->belongsToMany(Specialization::class, 'role_user');
+    }
 }

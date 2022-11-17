@@ -10,6 +10,6 @@ class Specialization extends Model
     use HasFactory;
 
     public function doctors(){
-        return $this->belongsToMany(Specialization::class, 'doctor_specializations');
+        return $this->belongsToMany(Doctor::class, 'doctor_specializations');
     }
 }

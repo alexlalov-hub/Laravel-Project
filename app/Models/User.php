@@ -48,7 +48,7 @@ class User extends Authenticatable
     }
 
     public function doctors(){
-        return $this->hasMany(Doctor::class);
+        return $this->belongsToMany(Doctor::class, 'doctor_users');
     }
 
     public function events(){

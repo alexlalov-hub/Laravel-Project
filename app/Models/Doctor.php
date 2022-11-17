@@ -10,7 +10,7 @@ class Doctor extends Model
     use HasFactory;
 
     public function users(){
-        return $this->hasMany(User::class);
+        return $this->belongsToMany(User::class, 'doctor_users');
     }
 
     public function facilities(){

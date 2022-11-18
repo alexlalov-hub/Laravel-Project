@@ -18,10 +18,11 @@ return new class extends Migration
             $table->foreignId("user_id")->constrained()->cascadeOnDelete();
             $table->foreignId("facility_id")->constrained()->cascadeOnDelete();
             $table->foreignId("clinic_id")->constrained()->cascadeOnDelete();
-            $table->time("start_time");
-            $table->time("end_time");
-            $table->enum("event", ['pending', 'ongoing', 'ended']);
+            $table->dateTime("start_time");
+            $table->dateTime("end_time");
+            $table->enum("status", ['pending', 'ongoing', 'ended']);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

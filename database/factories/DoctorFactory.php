@@ -17,7 +17,12 @@ class DoctorFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => fake()->name(),
+            'address' => fake()->unique()->streetAddress(),
+            'city' => fake()->unique()->city(),
+            'country' => fake()->unique()->country(),
+            'email' => fake()->unique()->safeEmail(),
+            'phone' => fake()->unique()->phoneNumber(),
         ];
     }
 }

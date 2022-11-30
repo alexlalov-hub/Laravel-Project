@@ -17,10 +17,12 @@ class ClinicFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
-            'address' => $this->faker->unique()->address(),
+            'name' => $this->faker->company(),
+            'address' => $this->faker->unique()->streetAddress(),
+            'city' => $this->faker->unique()->city(),
+            'country' => $this->faker->unique()->country(),
             'email' => $this->faker->unique()->safeEmail(),
-            'phone' => $this->faker->unique()->phoneNumber()
+            'phone' => $this->faker->unique()->phoneNumber(),
         ];
     }
 }

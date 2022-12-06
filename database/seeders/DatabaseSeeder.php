@@ -17,17 +17,22 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'username' => 'admin',
-            'firstname' => 'Admin',
-            'lastname' => 'Admin',
-            'email' => 'admin@argon.com',
-            'password' => bcrypt('secret')
+            'username' => 'alexlalov04',
+            'firstname' => 'Alex',
+            'lastname' => 'Lalov',
+            'email' => 'alex.lalov04@gmail.com',
+            'password' => bcrypt('Obzor4268'),
+            'address' => 'Maria Gabrovska',
+            'city' => 'Veliko Tarnovo',
+            'country' => 'Bulgaria',
+            'about' => 'Just Alex.',
+
         ]);
 
         $this->call([
             UserSeeder::class,
-            ClinicSeeder::class,
             DoctorSeeder::class,
+            ClinicSeeder::class,
         ]);
     }
 }

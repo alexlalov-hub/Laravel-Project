@@ -72,6 +72,11 @@
                                             @endforeach
                                         </td>
                                         <td class="align-middle text-center">
+                                            @foreach($doctor->users()->get() as $user)
+                                                <p class="text-xs font-weight-bold mb-0">{{$user->username}}</p>
+                                            @endforeach
+                                        </td>
+                                        <td class="align-middle text-center">
                                             <a href="javascript:;" class="text-secondary font-weight-bold text-xs mr-4"
                                                data-toggle="tooltip" data-original-title="Edit doctor">
                                                 Edit

@@ -82,8 +82,6 @@
                                         </td>
                                     </tr>
                                 @endforeach
-
-                                    s
                                 </tbody>
                             </table>
                         </div>

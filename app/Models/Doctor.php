@@ -11,7 +11,7 @@ class Doctor extends Model
     use HasFactory, SoftDeletes;
 
     public function users(){
-        return $this->belongsToMany(User::class, 'doctor_users');
+        return $this->belongsToMany(User::class);
     }
 
     public function facilities(){
@@ -19,7 +19,7 @@ class Doctor extends Model
     }
 
     public function clinics(){
-        return $this->belongsToMany(Clinic::class, 'clinic_doctors');
+        return $this->belongsToMany(Clinic::class);
     }
 
     public function events(){

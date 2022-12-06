@@ -15,6 +15,9 @@ class ClinicSeeder extends Seeder
      */
     public function run()
     {
-        Clinic::factory()->count(20)->create();
+        Clinic::factory()
+            ->count(20)
+            ->hasDoctors(3)
+            ->create();
     }
 }

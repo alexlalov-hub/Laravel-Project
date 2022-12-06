@@ -15,7 +15,7 @@ class Clinic extends Model
     }
 
     public function doctors(){
-        return $this->belongsToMany(Doctor::class, 'clinic_doctors');
+        return $this->belongsToMany(Doctor::class);
     }
 
     public function events(){

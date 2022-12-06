@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Doctor;
 use Illuminate\Http\Request;
 
 class DoctorController extends Controller
@@ -13,7 +14,8 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        //
+//        dd(Doctor::all()[0]->clinics()->get()[0]->name);
+        return view('pages.doctors')->with('doctors', Doctor::all()->sortBy('name'));
     }
 
     /**

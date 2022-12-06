@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Clinic;
 use Illuminate\Http\Request;
 
 class ClinicController extends Controller
@@ -13,7 +14,7 @@ class ClinicController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.clinics')->with('clinics', Clinic::all()->sortBy('name'));
     }
 
     /**

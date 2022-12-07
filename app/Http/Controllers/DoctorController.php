@@ -14,8 +14,8 @@ class DoctorController extends Controller
      */
     public function index()
     {
-//        dd(Doctor::all()[0]->clinics()->get()[0]->name);
-        return view('pages.doctors')->with('doctors', Doctor::all()->sortBy('name'));
+        $model = Doctor::paginate(16)->withQueryString();
+        return view('pages.doctors')->with('doctors', $model);
     }
 
     /**

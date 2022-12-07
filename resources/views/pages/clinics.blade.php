@@ -14,9 +14,18 @@
                             <table class="table align-items-center mb-0">
                                 <thead>
                                     <tr>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Clinic</th>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">clinics.blade.php
+                                        <th>
+                                            <a>
+                                                <i class="fa-solid fa-arrow-down-a-z fa-xl"></i>
+                                            </a>
+
+                                            Clinic
+
+                                            <a>
+                                                <i class="fa-solid fa-arrow-up-z-a fa-xl"></i>
+                                            </a>
+                                        </th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                             Address</th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
@@ -50,7 +59,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td class="align-middle text-center text-sm">
                                             <p class="text-xs font-weight-bold mb-0">{{$clinic->address}}</p>
                                         </td>
                                         <td class="align-middle text-center text-sm">
@@ -84,11 +93,15 @@
                                 @endforeach
                                 </tbody>
                             </table>
+
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </div>
+            {{$clinics->links()}}
         @include('layouts.footers.auth.footer')
     </div>
 @endsection

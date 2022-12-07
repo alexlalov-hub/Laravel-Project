@@ -9,7 +9,8 @@ use Illuminate\Validation\Rule;
 class UserProfileController extends Controller
 {
     public function index(){
-        return view('pages.users')->with('users', User::all()->sortBy('username'));
+        $model = User::paginate(16)->withQueryString();
+        return view('pages.users')->with('users', $model);
     }
     public function show()
     {

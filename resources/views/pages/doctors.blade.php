@@ -23,9 +23,6 @@
                                             City</th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Country</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                             Email</th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
@@ -35,7 +32,7 @@
                                             Clinics</th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Users</th>
+                                            Patients</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                             Actions</th>
                                     </tr>
@@ -59,9 +56,6 @@
                                         </td>
                                         <td class="align-middle text-center text-sm">
                                             <p class="text-xs font-weight-bold mb-0">{{$doctor->city}}</p>
-                                        </td>
-                                        <td class="align-middle text-center">
-                                            <p class="text-xs font-weight-bold mb-0">{{$doctor->country}}</p>
                                         </td>
                                         <td class="align-middle text-center">
                                             <p class="text-xs font-weight-bold mb-0">{{$doctor->email}}</p>
@@ -98,6 +92,7 @@
                 </div>
             </div>
         </div>
+        {{$doctors->links()}}
         @include('layouts.footers.auth.footer')
     </div>
 @endsection

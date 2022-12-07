@@ -14,7 +14,11 @@ class ClinicController extends Controller
      */
     public function index()
     {
-        return view('pages.clinics')->with('clinics', Clinic::all()->sortBy('name'));
+        $model = Clinic::paginate(16)->withQueryString();
+
+        if(request()->query){
+        }
+        return view('pages.clinics')->with('clinics', $model);
     }
 
     /**

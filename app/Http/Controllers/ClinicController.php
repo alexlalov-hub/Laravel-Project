@@ -14,11 +14,17 @@ class ClinicController extends Controller
      */
     public function index()
     {
-        $model = Clinic::paginate(16)->withQueryString();
+        $model = Clinic::query();
 
-        if(request()->query){
+        if(request()->query->has('sortBy')){
+            if(request()->query->has('sortDir')){
+              $model->orderBy(request()->query->get('sortBy'), request()->query->get('sortDir'));
+            }else{
+                $model->orderBy(request()->query->get('sortBy'));
+            }
         }
-        return view('pages.clinics')->with('clinics', $model);
+
+        return view('pages.clinics')->with('clinics', $model->paginate(16)->withQueryString());
     }
 
     /**

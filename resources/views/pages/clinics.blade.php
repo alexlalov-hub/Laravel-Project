@@ -15,34 +15,78 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            <a>
-                                                <i class="fa-solid fa-arrow-down-a-z fa-xl"></i>
+                                            <a class="" href="/clinics?sortBy=name">
+                                                <i class="fa-solid fa-arrow-up-z-a"></i>
                                             </a>
 
                                             Clinic
 
-                                            <a>
-                                                <i class="fa-solid fa-arrow-up-z-a fa-xl"></i>
+                                            <a class="" href="/clinics?sortBy=name&sortDir=desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
                                             </a>
                                         </th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Address</th>
+                                        <th class="text-center">
+                                            <a class="" href="/clinics?sortBy=address">
+                                                <i class="fa-solid fa-arrow-up-z-a"></i>
+                                            </a>
+
+                                            Address
+
+                                            <a class="" href="/clinics?sortBy=address&sortDir=desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </a>
+                                        </th>
                                         <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            City</th>
+                                            class="text-center">
+                                            <a class="" href="/clinics?sortBy=city">
+                                                <i class="fa-solid fa-arrow-up-z-a"></i>
+                                            </a>
+
+                                            City
+
+                                            <a class="" href="/clinics?sortBy=city&sortDir=desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </a>
+                                        </th>
                                         <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Country</th>
+                                            class="text-center">
+                                            <a class="" href="/clinics?sortBy=country">
+                                                <i class="fa-solid fa-arrow-up-z-a"></i>
+                                            </a>
+
+                                            Country
+
+                                            <a class="" href="/clinics?sortBy=country&sortDir=desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </a>
+                                        </th>
                                         <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Email</th>
+                                            class="text-center">
+                                            <a class="" href="/clinics?sortBy=email">
+                                                <i class="fa-solid fa-arrow-up-z-a"></i>
+                                            </a>
+
+                                            Email
+
+                                            <a class="" href="/clinics?sortBy=email&sortDir=desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </a>
+                                        </th>
                                         <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Phone</th>
+                                            class="text-center">
+                                            <a class="" href="/clinics?sortBy=phone">
+                                                <i class="fa-solid fa-arrow-up-z-a"></i>
+                                            </a>
+
+                                            Phone
+
+                                            <a class="" href="/clinics?sortBy=phone&sortDir=desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </a>                                        </th>
                                         <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            class="text-center">
                                             Doctors</th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Actions</th>
+                                        <th class="text-center">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>

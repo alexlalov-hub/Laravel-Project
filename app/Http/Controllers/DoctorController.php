@@ -14,8 +14,22 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        $model = Doctor::paginate(16)->withQueryString();
-        return view('pages.doctors')->with('doctors', $model);
+        $model = Doctor::query();
+
+        if(request()->query->has('sortBy')
+            && in_array(request()->query
+                ->get('sortBy'), ['name', 'address', 'city', 'country', 'email', 'phone'])){
+            if(request()->query->has('sortDir')){
+                $model->orderBy(request()->query->get('sortBy'), request()->query->get('sortDir'));
+            }else{
+                $model->orderBy(request()->query->get('sortBy'));
+            }
+        }
+        else{
+            redirect('/doctors')->with('doctors', $model->paginate(16));
+        }
+
+        return view('pages.doctors')->with('doctors', $model->paginate(16)->withQueryString());
     }
 
     /**

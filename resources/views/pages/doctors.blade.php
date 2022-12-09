@@ -13,29 +13,74 @@
                         <div class="table-responsive p-0">
                             <table class="table align-items-center mb-0">
                                 <thead>
-                                    <tr>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Clinic</th>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                            Address</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            City</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Email</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Phone</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Clinics</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Patients</th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Actions</th>
-                                    </tr>
+                                <tr>
+                                    <th>
+                                        <a class="" href="/doctors?sortBy=name">
+                                            <i class="fa-solid fa-arrow-up-z-a"></i>
+                                        </a>
+
+                                        Name
+
+                                        <a class="" href="/doctors?sortBy=name&sortDir=desc">
+                                            <i class="fa-solid fa-arrow-down-z-a"></i>
+                                        </a>
+                                    </th>
+                                    <th class="text-center">
+                                        <a class="" href="/doctors?sortBy=address">
+                                            <i class="fa-solid fa-arrow-up-z-a"></i>
+                                        </a>
+
+                                        Address
+
+                                        <a class="" href="/doctors?sortBy=address&sortDir=desc">
+                                            <i class="fa-solid fa-arrow-down-z-a"></i>
+                                        </a>
+                                    </th>
+                                    <th
+                                        class="text-center">
+                                        <a class="" href="/doctors?sortBy=city">
+                                            <i class="fa-solid fa-arrow-up-z-a"></i>
+                                        </a>
+
+                                        City
+
+                                        <a class="" href="/doctors?sortBy=city&sortDir=desc">
+                                            <i class="fa-solid fa-arrow-down-z-a"></i>
+                                        </a>
+                                    </th>
+                                    <th
+                                        class="text-center">
+                                        <a class="" href="/doctors?sortBy=email">
+                                            <i class="fa-solid fa-arrow-up-z-a"></i>
+                                        </a>
+
+                                        Email
+
+                                        <a class="" href="/doctors?sortBy=email&sortDir=desc">
+                                            <i class="fa-solid fa-arrow-down-z-a"></i>
+                                        </a>
+                                    </th>
+                                    <th
+                                        class="text-center">
+                                        <a class="" href="/doctors?sortBy=phone">
+                                            <i class="fa-solid fa-arrow-up-z-a"></i>
+                                        </a>
+
+                                        Phone
+
+                                        <a class="" href="/doctors?sortBy=phone&sortDir=desc">
+                                            <i class="fa-solid fa-arrow-down-z-a"></i>
+                                        </a>
+                                    </th>
+                                    <th
+                                        class="text-center">
+                                        Clinics
+                                    <th
+                                        class="text-center">
+                                        Patients
+                                    </th>
+                                    <th class="text-center">Actions</th>
+                                </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($doctors as $doctor)
@@ -52,7 +97,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{$doctor->address}}</p>
+                                            <p class="text-center text-xs font-weight-bold mb-0">{{$doctor->address}}</p>
                                         </td>
                                         <td class="align-middle text-center text-sm">
                                             <p class="text-xs font-weight-bold mb-0">{{$doctor->city}}</p>

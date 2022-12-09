@@ -9,8 +9,22 @@ use Illuminate\Validation\Rule;
 class UserProfileController extends Controller
 {
     public function index(){
-        $model = User::paginate(16)->withQueryString();
-        return view('pages.users')->with('users', $model);
+        $model = User::query();
+
+        if(request()->query->has('sortBy')
+            && in_array(request()->query
+                ->get('sortBy'), ['firstName', 'address', 'city', 'country', 'email', 'phone', 'username'])){
+            if(request()->query->has('sortDir')){
+                $model->orderBy(request()->query->get('sortBy'), request()->query->get('sortDir'));
+            }else{
+                $model->orderBy(request()->query->get('sortBy'));
+            }
+        }
+        else{
+            redirect('/patients')->with('clinics', $model->paginate(16));
+        }
+
+        return view('pages.users')->with('users', $model->paginate(16)->withQueryString());
     }
     public function show()
     {

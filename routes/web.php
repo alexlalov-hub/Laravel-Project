@@ -40,7 +40,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/profile', [UserProfileController::class, 'show'])->name('profile');
 	Route::get('/clinics', [ClinicController::class, 'index'])->name('clinics');
 	Route::get('/doctors', [DoctorController::class, 'index'])->name('doctors');
-	Route::get('/users', [UserProfileController::class, 'index'])->name('users');
+	Route::get('/patients', [UserProfileController::class, 'index'])->name('patients');
 	Route::post('/profile', [UserProfileController::class, 'update'])->name('profile.update');
 	Route::get('/{page}', [PageController::class, 'index'])->name('page');
 	Route::post('logout', [LoginController::class, 'logout'])->name('logout');

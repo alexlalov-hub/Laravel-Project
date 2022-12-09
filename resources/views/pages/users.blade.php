@@ -14,32 +14,92 @@
                             <table class="table align-items-center mb-0">
                                 <thead>
                                     <tr>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Username</th>
+                                        <th>
+                                            <a class="" href="/patients?sortBy=username">
+                                                <i class="fa-solid fa-arrow-up-z-a"></i>
+                                            </a>
+
+                                            Username
+
+                                            <a class="" href="/patients?sortBy=username&sortDir=desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </a>
+                                        </th>
+                                        <th class="text-center">
+                                            <a class="" href="/patients?sortBy=firstName">
+                                                <i class="fa-solid fa-arrow-up-z-a"></i>
+                                            </a>
+
+                                            Name
+
+                                            <a class="" href="/patients?sortBy=firstName&sortDir=desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </a>
+                                        </th>
                                         <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Name</th>
+                                            class="text-center">
+                                            <a class="" href="/patients?sortBy=email">
+                                                <i class="fa-solid fa-arrow-up-z-a"></i>
+                                            </a>
+
+                                            Email
+
+                                            <a class="" href="/patients?sortBy=email&sortDir=desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </a>
+                                        </th>
                                         <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Email</th>
+                                            class="text-center">
+                                            <a class="" href="/patients?sortBy=address">
+                                                <i class="fa-solid fa-arrow-up-z-a"></i>
+                                            </a>
+
+                                            Address
+
+                                            <a class="" href="/patients?sortBy=address&sortDir=desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </a>
+                                        </th>
                                         <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Address</th>
+                                            class="text-center">
+                                            <a class="" href="/patients?sortBy=city">
+                                                <i class="fa-solid fa-arrow-up-z-a"></i>
+                                            </a>
+
+                                            City
+
+                                            <a class="" href="/patients?sortBy=city&sortDir=desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </a>
+                                        </th>
                                         <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            City</th>
+                                            class="text-center">
+                                            <a class="" href="/patients?sortBy=country">
+                                                <i class="fa-solid fa-arrow-up-z-a"></i>
+                                            </a>
+
+                                            Country
+
+                                            <a class="" href="/patients?sortBy=country&sortDir=desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </a>
+                                        </th>
                                         <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Country</th>
+                                            class="text-center">
+                                            <a class="" href="/patients?sortBy=phone">
+                                                <i class="fa-solid fa-arrow-up-z-a"></i>
+                                            </a>
+
+                                            Postal
+
+                                            <a class="" href="/patients?sortBy=phone&sortDir=desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </a>
+                                        </th>
                                         <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Postal</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            class="text-center">
                                             Doctors</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Actions</th>
+                                        <th class="text-center">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>

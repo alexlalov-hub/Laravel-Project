@@ -62,7 +62,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="{{ route('users')}}">
+                <a class="nav-link " href="{{ route('patients')}}">
                     <div
                         class="text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa-sharp fa-solid fa-users-medical"></i>

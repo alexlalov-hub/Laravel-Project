@@ -26,6 +26,7 @@ class UserFactory extends Factory
             'address' => fake()->unique()->streetAddress(),
             'city' => fake()->city(),
             'country' => fake()->country(),
+            'phone' => fake()->phoneNumber(),
             'postal' => fake()->postcode(),
             'about' => fake()->text(maxNbChars: 255),
             'email_verified_at' => now(),

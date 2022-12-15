@@ -14,14 +14,22 @@ class UserProfileController extends Controller
         if(request()->query->has('sortBy')
             && in_array(request()->query
                 ->get('sortBy'), ['firstName', 'address', 'city', 'country', 'email', 'phone', 'username'])){
-            if(request()->query->has('sortDir')){
-                $model->orderBy(request()->query->get('sortBy'), request()->query->get('sortDir'));
+
+            if(request()->query->has('sortDir')
+                && in_array(request()->query->get('sortDir'), ['asc', 'desc'])){
+
+                if(request()->query->has('sortDir')){
+                    $model->orderBy(request()->query->get('sortBy'), request()->query->get('sortDir'));
+                }else{
+                    $model->orderBy(request()->query->get('sortBy'));
+                }
+
             }else{
-                $model->orderBy(request()->query->get('sortBy'));
+                redirect('/patients')->with('users', $model->paginate(16));
             }
         }
         else{
-            redirect('/patients')->with('clinics', $model->paginate(16));
+            redirect('/patients')->with('users', $model->paginate(16));
         }
 
         return view('pages.users')->with('users', $model->paginate(16)->withQueryString());

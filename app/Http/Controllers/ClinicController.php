@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Clinic;
+use Illuminate\Database\Eloquent\Concerns\HasRelationships;
 use Illuminate\Http\Request;
+use Illuminate\Testing\Fluent\Concerns\Has;
+use Spatie\Permission\Traits\HasRoles;
 
 class ClinicController extends Controller
 {
+    use HasRoles;
     /**
      * Display a listing of the resource.
      *
@@ -16,9 +20,7 @@ class ClinicController extends Controller
     {
         $model = Clinic::query();
 
-        if(request()->query->has('sortBy')
-            && in_array(request()->query
-                ->get('sortBy'), ['name', 'address', 'city', 'country', 'email', 'phone'])){
+        if(request()->query->has('sortBy') && in_array(request()->query->get('sortBy'), ['name', 'address', 'city', 'country', 'email', 'phone']) && in_array(request()->query->get('sortDir'), ['asc', 'desc'])){
             if(request()->query->has('sortDir') &&
                 in_array(request()->query->get('sortDir'), ['asc', 'desc'])){
                 redirect('/clinics')->with('clinics', $model->paginate(16));
@@ -43,7 +45,7 @@ class ClinicController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**

@@ -22,6 +22,7 @@ class RegisterController extends Controller
         ]);
 
         $user = User::create($attributes);
+        $user->assignRole('patient');
         auth()->login($user);
 
         return redirect('/dashboard');

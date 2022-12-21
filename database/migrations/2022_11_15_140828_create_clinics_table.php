@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string("city");
             $table->string("country");
             $table->string("email")->unique();
+            $table->string("password")->unique();
             $table->string("phone")->unique();
             $table->timestamps();
             $table->softDeletes();

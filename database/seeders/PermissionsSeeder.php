@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Database\Factories\UserFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Permission;
@@ -34,6 +35,8 @@ class PermissionsSeeder extends Seeder
         $role2->givePermissionTo('publish articles');
         $role2->givePermissionTo('unpublish articles');
 
-        $role3 = Role::create(['name' => 'Super-Admin']);
+        factory(UserFactory::class, 50)->create()->each(function ($user) {
+           $user->assignRole('patient');
+        });
     }
 }

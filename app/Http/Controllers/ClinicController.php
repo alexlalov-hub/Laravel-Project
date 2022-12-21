@@ -6,6 +6,7 @@ use App\Models\Clinic;
 use Illuminate\Database\Eloquent\Concerns\HasRelationships;
 use Illuminate\Http\Request;
 use Illuminate\Testing\Fluent\Concerns\Has;
+use Illuminate\Validation\Rule;
 use Spatie\Permission\Traits\HasRoles;
 
 class ClinicController extends Controller
@@ -56,7 +57,21 @@ class ClinicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = $request->validate([
+            'username' => ['required', 'max:16', 'min:2'],
+            'email' => ['required', 'email', Rule::unique('clinics', 'email')],
+            'address' => ['required', 'max:100'],
+            'city' => ['required', 'max:100'],
+            'country' => ['required', 'max:100'],
+            'postal' => ['numeric'],
+            'about' => ['max:255']
+        ]);
+
+        $clinic = Clinic::create($attributes);
+        $clinic->assignRole('clinic');
+        auth()->login($clinic);
+
+        return redirect('/dashboard');
     }
 
     /**

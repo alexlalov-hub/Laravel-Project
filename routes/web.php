@@ -1,5 +1,14 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\ResetPassword;
+use App\Http\Controllers\ChangePassword;
+use App\Http\Controllers\ClinicController;
+use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\UserProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,16 +21,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\UserProfileController;
-use App\Http\Controllers\ResetPassword;
-use App\Http\Controllers\ChangePassword;
-use App\Http\Controllers\ClinicController;
-use \App\Http\Controllers\DoctorController;
 
 
 Route::get('/', function () {return redirect('/dashboard');})->middleware('auth');

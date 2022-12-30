@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
-use Illuminate\Notifications\Notifiable;
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Notifications\ForgotPassword;
+use Illuminate\Http\Request;
+use Illuminate\Notifications\Notifiable;
 
 class ResetPassword extends Controller
 {

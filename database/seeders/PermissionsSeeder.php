@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -35,8 +36,6 @@ class PermissionsSeeder extends Seeder
         $role2->givePermissionTo('publish articles');
         $role2->givePermissionTo('unpublish articles');
 
-        factory(UserFactory::class, 50)->create()->each(function ($user) {
-           $user->assignRole('patient');
-        });
+        User::factory()->count(20)->create();
     }
 }

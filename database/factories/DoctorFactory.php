@@ -22,6 +22,7 @@ class DoctorFactory extends Factory
             'city' => fake()->unique()->city(),
             'country' => fake()->unique()->country(),
             'email' => fake()->unique()->safeEmail(),
+            'password' => fake()->unique()->password(),
             'phone' => fake()->unique()->phoneNumber(),
         ];
     }

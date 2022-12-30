@@ -22,6 +22,7 @@ class ClinicFactory extends Factory
             'city' => $this->faker->unique()->city(),
             'country' => $this->faker->unique()->country(),
             'email' => $this->faker->unique()->safeEmail(),
+            'password' => $this->faker->unique()->password(),
             'phone' => $this->faker->unique()->phoneNumber(),
         ];
     }

@@ -27,7 +27,7 @@ class ClinicController extends Controller
                 redirect('/clinics')->with('clinics', $model->paginate(16));
             }
             if(request()->query->has('sortDir')){
-              $model->orderBy(request()->query->get('sortBy'), request()->query->get('sortDir'));
+                $model->orderBy(request()->query->get('sortBy'), request()->query->get('sortDir'));
             }else{
                 $model->orderBy(request()->query->get('sortBy'));
             }

@@ -10,6 +10,8 @@ use Spatie\Permission\Traits\HasRoles;
 class Doctor extends Model
 {
     use HasFactory, SoftDeletes, HasRoles;
+
+    protected $guard_name = 'web';
     /**
      * The attributes that are mass assignable.
      *
@@ -75,5 +77,9 @@ class Doctor extends Model
 
     public function specilizations(){
         return $this->belongsToMany(Specialization::class, 'role_user');
+    }
+
+    public function schedule(){
+        return $this->hasOne(Schedule::class);
     }
 }

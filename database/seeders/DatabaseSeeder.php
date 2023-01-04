@@ -30,10 +30,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call([
-            PermissionsSeeder::class,
-//            UserSeeder::class,
+            UserSeeder::class,
             DoctorSeeder::class,
             ClinicSeeder::class,
+            ScheduleSeeder::class,
+            PermissionsSeeder::class,
         ]);
     }
 }

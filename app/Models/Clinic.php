@@ -11,6 +11,8 @@ class Clinic extends Model
 {
     use HasFactory, SoftDeletes, HasRoles;
 
+    protected $guard_name = 'web';
+
     /**
      * The attributes that are mass assignable.
      *

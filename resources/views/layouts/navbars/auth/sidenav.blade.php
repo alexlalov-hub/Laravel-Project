@@ -64,8 +64,8 @@
             <li class="nav-item">
                 <a class="nav-link " href="{{ route('patients')}}">
                     <div
-                        class="text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fa-sharp fa-solid fa-users-medical"></i>
+                        class="icon icon-sm text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-hospital-user -ml-7"></i>
                     </div>
                     <span class="nav-link-text ms-1">Patients</span>
                 </a>

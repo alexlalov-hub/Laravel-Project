@@ -21,13 +21,15 @@ class DoctorController extends Controller
                 ->get('sortBy'), ['name', 'address', 'city', 'country', 'email', 'phone'])){
             if(request()->query->has('sortDir') &&
                 in_array(request()->query->get('sortDir'), ['asc', 'desc'])){
+                if(request()->query->has('sortDir')){
+                    $model->orderBy(request()->query->get('sortBy'), request()->query->get('sortDir'));
+                }else{
+                    $model->orderBy(request()->query->get('sortBy'));
+                }
+            }else{
                 redirect('/doctors')->with('doctors', $model->paginate(16));
             }
-            if(request()->query->has('sortDir')){
-                $model->orderBy(request()->query->get('sortBy'), request()->query->get('sortDir'));
-            }else{
-                $model->orderBy(request()->query->get('sortBy'));
-            }
+
         }
         else{
             redirect('/doctors')->with('doctors', $model->paginate(16));

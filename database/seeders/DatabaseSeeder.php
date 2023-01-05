@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             'address' => 'Maria Gabrovska',
             'city' => 'Veliko Tarnovo',
             'country' => 'Bulgaria',
+            'postal' => 5000,
             'about' => 'Just Alex.',
 
         ]);

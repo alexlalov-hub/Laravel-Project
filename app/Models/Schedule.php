@@ -10,6 +10,6 @@ class Schedule extends Model
     use HasFactory;
 
     public function doctor(){
-        $this->belongsTo(Doctor::class);
+        $this->belongsToMany(Doctor::class);
     }
 }

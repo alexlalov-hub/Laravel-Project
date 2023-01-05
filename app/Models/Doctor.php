@@ -79,7 +79,7 @@ class Doctor extends Model
         return $this->belongsToMany(Specialization::class, 'role_user');
     }
 
-    public function schedule(){
-        return $this->hasOne(Schedule::class);
+    public function schedules(){
+        return $this->hasMany(Schedule::class);
     }
 }
